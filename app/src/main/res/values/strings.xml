@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Talent Class Firebase BookApp</string>
+    <string name="shared_preference_talenthub">sharedPreferencesTalentHubClass</string>
+    <string name="title">Title</string>
+    <string name="name_author">Name Author</string>
+    <string name="year_release">Year Release</string>
+    <string name="category">Category</string>
+</resources>

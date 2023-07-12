@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".AddBookActivity">
+
+    <!--EditText for adding Title book name-->
+    <EditText
+        android:id="@+id/idEdtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:hint="Enter Title Book"
+        android:inputType="textCapCharacters" />
+
+    <!--EditText for adding Author book name-->
+    <EditText
+        android:id="@+id/idEdtAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Author"
+        android:inputType="textCapWords" />
+
+    <!--EditText for adding Yaer Release book name-->
+    <EditText
+        android:id="@+id/idEdtYearRelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Year Release"
+        android:inputType="numberDecimal" />
+
+    <!--EditText for adding Category book name-->
+    <EditText
+        android:id="@+id/idEdtCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Category"/>
+
+    <!--EditText for adding link Cover-->
+    <EditText
+        android:id="@+id/idEdtLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Link Image"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:orientation="horizontal" >
+
+        <!--Button for adding data to Firebase-->
+        <Button
+            android:id="@+id/idBtnSendData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:icon="@drawable/ic_baseline_add_24"
+            android:backgroundTint="@color/primary"
+            android:text="Add Book"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</LinearLayout>

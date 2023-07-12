@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "181805349038",
+    "firebase_url": "https://talent-class-firebase-bookapp-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "talent-class-firebase-bookapp",
+    "storage_bucket": "talent-class-firebase-bookapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181805349038:android:258a1c1f5d67487fdc953f",
+        "android_client_info": {
+          "package_name": "com.adrian.talentclassfirebasebookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181805349038-m3ujkqkou8fs14ntr6d3haso1sadfbmm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvQ8Bx3fuDjkDZRybcf5BNNA7cJsn3MkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181805349038-m3ujkqkou8fs14ntr6d3haso1sadfbmm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
