@@ -21,7 +21,6 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.BookListViewHolder>() {
         notifyDataSetChanged()
     }
 
-
     inner class BookListViewHolder(private val binding: ItemRowBookBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {

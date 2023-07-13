@@ -1,9 +1,13 @@
 package com.adrian.talentclassfirebasebookapp
 
+import android.R
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.adrian.talentclassfirebasebookapp.data.BookFirebaseRealtimeDBModel
@@ -33,13 +37,27 @@ class EditBookActivity : AppCompatActivity() {
             val category = intent.getStringExtra("category")!!
             val bookCoverURL = intent.getStringExtra("bookCoverURL")!!
 
-
             binding.idEdtTitle.text = Editable.Factory.getInstance().newEditable(bookTitle)
             binding.idEdtAuthor.text = Editable.Factory.getInstance().newEditable(authorName)
-            binding.idEdtYearRelease.text =
-                Editable.Factory.getInstance().newEditable(publicationYear)
-            binding.idEdtCategory.text = Editable.Factory.getInstance().newEditable(category)
+            binding.idEdtYearRelease.text = Editable.Factory.getInstance().newEditable(publicationYear)
             binding.idEdtLink.text = Editable.Factory.getInstance().newEditable(bookCoverURL)
+
+            val listCategory = arrayOf("Komik",
+                "Novel",
+                "Biografi",
+                "Majalah",
+                "Ensiklopedia",
+                "Naskah")
+
+            val selectedIndex = listCategory.indexOf(category)
+            binding.idSpinnerCategory.setSelection(selectedIndex)
+
+            // Membuat adapter untuk dropdown
+            val adapter = ArrayAdapter(this, R.layout.simple_spinner_item, listCategory)
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+            // Menetapkan adapter ke spinner
+            binding.idSpinnerCategory.adapter = adapter
         }
     }
 
@@ -63,7 +81,7 @@ class EditBookActivity : AppCompatActivity() {
         val bookTitle = binding.idEdtTitle.text.toString()
         val authorName = binding.idEdtAuthor.text.toString()
         val publicationYear = binding.idEdtYearRelease.text.toString()
-        val category = binding.idEdtCategory.text.toString()
+        val category = binding.idSpinnerCategory.selectedItem.toString()
         val bookCoverURL = binding.idEdtLink.text.toString()
 
         if (bookTitle.isEmpty()) {
@@ -76,10 +94,6 @@ class EditBookActivity : AppCompatActivity() {
 
         if (publicationYear.isEmpty()) {
             binding.idEdtYearRelease.error = "Tahun terbit tidak boleh kosong"
-        }
-
-        if (category.isEmpty()) {
-            binding.idEdtCategory.error = "Kategori tidak boleh kosong"
         }
 
         if (bookCoverURL.isEmpty()) {

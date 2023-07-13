@@ -81,16 +81,16 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp" />
 
-    <EditText
-        android:id="@+id/idEdtCategory"
+    <Spinner
+        android:id="@+id/idSpinnerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:padding="12dp"
         style="@style/EditText.PoppinsNormal14purple500"
-        android:background="@drawable/shape_rectangle_outline_8_020202"
-        android:hint="Enter Category"/>
+        android:background="@drawable/shape_rectangle_outline_8_020202" />
+
 
     <!--EditText for adding link Cover-->
     <TextView
