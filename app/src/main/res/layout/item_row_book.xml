@@ -20,7 +20,7 @@
         <ImageView
             android:id="@+id/img_item_photo"
             android:layout_width="110dp"
-            android:layout_height="140dp"
+            android:layout_height="160dp"
             android:scaleType="centerInside"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,6 @@
             android:id="@+id/tv_item_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/img_item_photo"
             android:textSize="16sp"
             android:layout_marginLeft="8dp"
@@ -43,31 +42,44 @@
             tools:text="@string/title" />
 
         <TextView
+            android:id="@+id/stringAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:textSize="14sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            android:text="@string/name_author"/>
+        <TextView
             android:id="@+id/tv_item_author"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/img_item_photo"
             android:textSize="14sp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            card_view:layout_constraintTop_toBottomOf="@+id/stringAuthor"
             tools:text="@string/name_author" />
 
+
         <TextView
-            android:id="@+id/tv_item_release"
+            android:id="@+id/stringCategory"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:textStyle="italic"
             android:layout_toEndOf="@id/img_item_photo"
             android:textSize="14sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_category"
-            tools:text="@string/year_release" />
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_author"
+            android:text="@string/category" />
 
         <TextView
             android:id="@+id/tv_item_category"
@@ -76,11 +88,39 @@
             android:layout_toEndOf="@id/img_item_photo"
             android:textSize="14sp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_author"
+            card_view:layout_constraintTop_toBottomOf="@+id/stringCategory"
             tools:text="@string/category" />
+
+
+        <TextView
+            android:id="@+id/stringYearRelease"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="italic|bold"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:textSize="14sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_category"
+            android:text="@string/year_release" />
+
+        <TextView
+            android:id="@+id/tv_item_release"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textStyle="italic"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:textSize="14sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
+            card_view:layout_constraintTop_toBottomOf="@+id/stringYearRelease"
+            tools:text="@string/year_release" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
