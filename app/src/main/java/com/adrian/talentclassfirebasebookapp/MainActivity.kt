@@ -69,12 +69,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecyclerListBooks(book: List<BookFirebaseRealtimeDBModel>) {
         val rvBookListAdapter = BookAdapter()
-
         binding.rvBooks.layoutManager = LinearLayoutManager(this)
         binding.rvBooks.adapter = rvBookListAdapter
         rvBookListAdapter.addedListOfBooks(book)
-
-
     }
 
 }

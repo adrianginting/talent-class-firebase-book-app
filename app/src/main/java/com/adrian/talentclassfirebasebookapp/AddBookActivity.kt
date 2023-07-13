@@ -18,6 +18,7 @@ class AddBookActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddBookBinding.inflate(layoutInflater)
+        supportActionBar?.setTitle("Tambah Buku")
         setContentView(binding.root)
 
         dropdownCategory()

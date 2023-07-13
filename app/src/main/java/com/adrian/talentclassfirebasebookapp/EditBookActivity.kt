@@ -23,6 +23,7 @@ class EditBookActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEditBookBinding.inflate(layoutInflater)
+        supportActionBar?.setTitle("Edit Buku")
         setContentView(binding.root)
         dataRef = FirebaseDatabase.getInstance().getReference("books")
 
