@@ -5,4 +5,5 @@
     <string name="name_author">Author Name</string>
     <string name="year_release">Year Release</string>
     <string name="category">Category</string>
+    <string name="link_Image">Link Image</string>
 </resources>
