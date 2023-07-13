@@ -3,6 +3,7 @@ package com.adrian.talentclassfirebasebookapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adrian.talentclassfirebasebookapp.adapter.BookAdapter
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         dataRef = FirebaseDatabase.getInstance().getReference("books")
         setButton()
-
+        showLoading(true)
         readDataBookFirebase()
 
     }
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                         publicationYear,
                         category
                     )
-
+                    showLoading(false)
                     bookList.add(book)
                 }
                 showRecyclerListBooks(bookList)
@@ -72,6 +73,15 @@ class MainActivity : AppCompatActivity() {
         binding.rvBooks.layoutManager = LinearLayoutManager(this)
         binding.rvBooks.adapter = rvBookListAdapter
         rvBookListAdapter.addedListOfBooks(book)
+    }
+
+
+    private fun showLoading(isShow : Boolean) {
+        if (isShow) {
+            binding.indeterminateBar.visibility = View.VISIBLE
+        } else {
+            binding.indeterminateBar.visibility = View.GONE
+        }
     }
 
 }

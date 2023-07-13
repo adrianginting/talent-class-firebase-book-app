@@ -16,7 +16,7 @@
 
     <style name="EditText"/>
     <style name="EditText.PoppinsNormal14purple500">
-        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">14sp</item>
     </style>
 

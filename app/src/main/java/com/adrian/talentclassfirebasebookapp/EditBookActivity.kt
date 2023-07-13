@@ -50,15 +50,16 @@ class EditBookActivity : AppCompatActivity() {
                 "Ensiklopedia",
                 "Naskah")
 
-            val selectedIndex = listCategory.indexOf(category)
-            binding.idSpinnerCategory.setSelection(selectedIndex)
-
             // Membuat adapter untuk dropdown
             val adapter = ArrayAdapter(this, R.layout.simple_spinner_item, listCategory)
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
             // Menetapkan adapter ke spinner
             binding.idSpinnerCategory.adapter = adapter
+
+            val selectedIndex = listCategory.indexOf(category)
+            binding.idSpinnerCategory.setSelection(selectedIndex)
+
         }
     }
 
