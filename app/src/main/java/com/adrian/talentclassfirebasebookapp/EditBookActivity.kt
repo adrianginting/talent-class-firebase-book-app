@@ -20,10 +20,10 @@ class EditBookActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditBookBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        dataRef = FirebaseDatabase.getInstance().getReference("books")
 
         setData()
-        settingFirebaseRealtimeDB()
-        settingEditButton()
+        setButton()
     }
     private fun setData() {
         if (intent.extras != null) {
@@ -43,11 +43,7 @@ class EditBookActivity : AppCompatActivity() {
         }
     }
 
-    private fun settingFirebaseRealtimeDB() {
-        dataRef = FirebaseDatabase.getInstance().getReference("books")
-    }
-
-    private fun settingEditButton() {
+    private fun setButton() {
         binding.apply {
             idBtnSaveData.setOnClickListener {
                 editData()
@@ -115,7 +111,7 @@ class EditBookActivity : AppCompatActivity() {
     }
 
 
-    private fun deleteDataFromFirebaseRealtimeDB() {
+    private fun deleteDataBookFirebase() {
         val key = intent.getStringExtra("key")!!
         val bookRef = dataRef.child(key)
 
@@ -135,7 +131,7 @@ class EditBookActivity : AppCompatActivity() {
         builder.setTitle("Konfirmasi")
             .setMessage("Anda yakin ingin menghapus data ini?")
             .setPositiveButton("Ya") { _, _ ->
-                deleteDataFromFirebaseRealtimeDB()
+                deleteDataBookFirebase()
             }
             .setNegativeButton("Tidak", null)
             .show()

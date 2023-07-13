@@ -19,27 +19,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        dataRef = FirebaseDatabase.getInstance().getReference("books")
+        setButton()
 
-        setFAB()
-
-        settingFirebaseRealtimeDB()
-
-        readDataFromFirebaseRealtimeDB()
+        readDataBookFirebase()
 
     }
 
-    private fun setFAB() {
+    private fun setButton() {
         binding.btnAdd.setOnClickListener {
             startActivity(Intent(this, AddBookActivity::class.java))
         }
     }
 
-    private fun settingFirebaseRealtimeDB() {
-        dataRef = FirebaseDatabase.getInstance().getReference("books")
-    }
-
-    private fun readDataFromFirebaseRealtimeDB() {
-
+    private fun readDataBookFirebase() {
         val bookList = mutableListOf<BookFirebaseRealtimeDBModel>()
 
         dataRef.addValueEventListener(object : ValueEventListener {
