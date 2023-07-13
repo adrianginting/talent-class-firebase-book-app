@@ -7,56 +7,119 @@
     android:orientation="vertical"
     tools:context=".EditBookActivity">
 
+
     <!--EditText for adding Title book name-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+
     <EditText
         android:id="@+id/idEdtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
         android:hint="Enter Title Book"
-        android:importantForAutofill="no"
-        android:inputType="textCapWords" />
+        android:padding="12dp"
+        style="@style/EditText.PoppinsNormal14purple500"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
+        android:inputType="textCapCharacters" />
 
     <!--EditText for adding Author book name-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_author"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+
     <EditText
         android:id="@+id/idEdtAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:padding="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        style="@style/EditText.PoppinsNormal14purple500"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
         android:hint="Enter Author"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName" />
+        android:inputType="textCapWords" />
 
     <!--EditText for adding Yaer Release book name-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_author"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+
     <EditText
         android:id="@+id/idEdtYearRelease"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="12dp"
+        style="@style/EditText.PoppinsNormal14purple500"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
         android:hint="Enter Year Release"
         android:inputType="numberDecimal" />
 
     <!--EditText for adding Category book name-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_author"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+
     <EditText
         android:id="@+id/idEdtCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="12dp"
+        style="@style/EditText.PoppinsNormal14purple500"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
         android:hint="Enter Category"/>
 
     <!--EditText for adding link Cover-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_author"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+
     <EditText
         android:id="@+id/idEdtLink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="12dp"
+        style="@style/EditText.PoppinsNormal14purple500"
+        android:background="@drawable/shape_rectangle_outline_8_020202"
         android:hint="Enter Link Image"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="end"
+        android:layout_marginTop="18dp"
         android:orientation="horizontal" >
 
         <!--Button for delete data to Firebase-->
@@ -80,11 +143,31 @@
             style="@style/Widget.MaterialComponents.Button.Icon"
             app:icon="@drawable/ic_baseline_edit_24"
             android:backgroundTint="@color/warning"
-
             android:text="Save Book"
             android:textAllCaps="false" />
-
-
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="end"
+        android:orientation="horizontal" >
+
+        <!--Button for back data-->
+        <Button
+            android:id="@+id/idBtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:icon="@drawable/baseline_arrow_back_24"
+            android:backgroundTint="@color/secondary"
+            android:text="Back"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
 
 </LinearLayout>

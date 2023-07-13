@@ -29,5 +29,9 @@ class AddBookActivity : AppCompatActivity() {
 
             finish()
         }
+
+        binding.idBtnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 }

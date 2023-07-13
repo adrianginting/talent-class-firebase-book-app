@@ -51,6 +51,9 @@ class EditBookActivity : AppCompatActivity() {
             idBtnDeleteData.setOnClickListener {
                 showDeleteConfirmationDialog()
             }
+            idBtnBack.setOnClickListener {
+                onBackPressedDispatcher.onBackPressed()
+            }
         }
     }
 
@@ -99,6 +102,7 @@ class EditBookActivity : AppCompatActivity() {
                 Toast.makeText(this@EditBookActivity, "Data berhasil diubah!", Toast.LENGTH_SHORT).show()
                 intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }
                 .addOnCanceledListener {
                     Toast.makeText(this@EditBookActivity, "Batal diubah!", Toast.LENGTH_SHORT).show()
